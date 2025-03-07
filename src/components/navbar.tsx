@@ -39,7 +39,7 @@ export function Navbar() {
           href="#home" 
           className="text-xl font-semibold tracking-tight hover-lift"
         >
-          <span className="text-gradient">Portfolio</span>
+          <span className="text-gradient">Kapil</span>
         </a>
 
         {/* Desktop Navigation */}
