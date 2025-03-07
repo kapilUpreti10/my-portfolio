@@ -1,4 +1,3 @@
-
 import { ArrowUpRight, Github } from "lucide-react";
 import { useState } from "react";
 
@@ -16,44 +15,52 @@ const projects: Project[] = [
   {
     id: 1,
     title: "E-Commerce Platform",
-    description: "A modern e-commerce platform with advanced filtering and payment integration.",
+    description:
+      "A modern e-commerce platform with advanced filtering and payment integration.",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "https://images.unsplash.com/photo-1629430640284-8cd9d86a5d03?w=600&h=400&q=80&fit=crop",
+    image:
+      "https://cdn.pixabay.com/photo/2020/08/03/10/00/money-5459709_1280.png",
     demoLink: "https://example.com",
-    githubLink: "https://github.com"
+    githubLink: "https://github.com",
   },
   {
     id: 2,
     title: "Portfolio Website",
-    description: "A minimalist portfolio website with smooth animations and responsive design.",
+    description:
+      "A minimalist portfolio website with smooth animations and responsive design.",
     tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&q=80&fit=crop",
+    image:
+      "https://cdn.pixabay.com/photo/2021/12/29/02/10/idea-6900632_1280.png",
     demoLink: "https://example.com",
-    githubLink: "https://github.com"
+    githubLink: "https://github.com",
   },
   {
     id: 3,
     title: "Task Management App",
-    description: "A productivity app for managing tasks with a drag-and-drop interface.",
+    description:
+      "A productivity app for managing tasks with a drag-and-drop interface.",
     tags: ["React", "Redux", "Firebase", "Material-UI"],
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&q=80&fit=crop",
+    image:
+      "https://media.istockphoto.com/id/1348671346/vector/vector-set-of-illustration-project-management-concept-line-art-style-background-design-for.jpg?s=2048x2048&w=is&k=20&c=WNOtBfzeCAUUM72jNPNnY5H7HtBG7WXXOmtYaMkZ0_Q=",
     demoLink: "https://example.com",
-    githubLink: "https://github.com"
+    githubLink: "https://github.com",
   },
   {
     id: 4,
     title: "Weather Dashboard",
-    description: "A beautiful weather application with real-time updates and forecast visualization.",
+    description:
+      "A beautiful weather application with real-time updates and forecast visualization.",
     tags: ["React", "Chart.js", "API Integration", "Geolocation"],
-    image: "https://images.unsplash.com/photo-1582642585553-00ac11640036?w=600&h=400&q=80&fit=crop",
+    image:
+      "https://media.istockphoto.com/id/1346734927/vector/hacker-and-cyber-criminals-phishing-stealing-private-personal-data-user-login-password.jpg?s=2048x2048&w=is&k=20&c=F5XDAuu4d5rhXp_4F88gscU_cHnsp-6aaOaCdZDrew4=",
     demoLink: "https://example.com",
-    githubLink: "https://github.com"
-  }
+    githubLink: "https://github.com",
+  },
 ];
 
 export function ProjectsSection() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
-  
+
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -65,17 +72,18 @@ export function ProjectsSection() {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Here are some of my recent projects. Each project represents different 
-            challenges and learning experiences that have helped me grow as a developer.
+            Here are some of my recent projects. Each project represents
+            different challenges and learning experiences that have helped me
+            grow as a developer.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={project.id}
               className={`glassmorphism rounded-2xl overflow-hidden group transition-all duration-500 animate-fade-in hover:shadow-xl`}
-              style={{ 
+              style={{
                 animationDelay: `${index * 150}ms`,
               }}
               onMouseEnter={() => setHoveredId(project.id)}
@@ -117,11 +125,13 @@ export function ProjectsSection() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
+                <p className="text-muted-foreground mb-4">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span 
-                      key={tag} 
+                    <span
+                      key={tag}
                       className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
                     >
                       {tag}
@@ -134,7 +144,7 @@ export function ProjectsSection() {
         </div>
 
         <div className="text-center mt-12">
-          <a 
+          <a
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -145,7 +155,7 @@ export function ProjectsSection() {
           </a>
         </div>
       </div>
-      
+
       {/* Background elements */}
       <div className="absolute top-1/4 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl opacity-70"></div>
       <div className="absolute bottom-1/3 right-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl opacity-70"></div>
