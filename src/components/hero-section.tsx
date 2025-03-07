@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import myImage from "../images/kapil.jpg";
 
 export function HeroSection() {
   return (
@@ -44,7 +45,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-full blur-3xl opacity-70 animate-float"></div>
               <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-white/10 shadow-xl glassmorphism">
                 <img
-                  src="./src/images/kapil.jpg"
+                  src={myImage}
                   alt="Profile"
                   className="w-full h-full object-cover object-center transform transition duration-500 hover:scale-110"
                   loading="lazy"
