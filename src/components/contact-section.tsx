@@ -1,3 +1,4 @@
+
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { useState } from "react";
 import emailjs from "emailjs-com";
@@ -21,7 +22,7 @@ export function ContactSection() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus("submitting");
 
@@ -29,7 +30,7 @@ export function ContactSection() {
       .sendForm(
         "0622m", // Your EmailJS service ID
         "template_1xif69a", // Your EmailJS template ID
-        e.target, // The form element
+        e.currentTarget, // Using currentTarget instead of target
         "S8UEijKHNfzkh6t3N" // Your EmailJS user ID
       )
       .then(
